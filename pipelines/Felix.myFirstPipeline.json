@@ -20,7 +20,7 @@
     "steps": [
       {
         "type": "extension",
-        "id": "@Felix/guetricksbackend",
+        "id": "@felixtest/test",
         "path": "@Felix/guetricksbackend/helloWorld.js",
         "input": [],
         "output": [
@@ -32,7 +32,7 @@
       },
       {
         "type": "extension",
-        "id": "@Felix/guetricksbackend",
+        "id": "@felixtest/test",
         "path": "@Felix/guetricksbackend/putNameIntoMessage.js",
         "input": [
           {
