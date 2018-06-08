@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "pipeline": {
+    "id": "Felix.myFirstPipeline",
+    "public": true,
+    "input": [
+      {
+        "key": "name",
+        "id": "10", 
+        "optional": true
+      }
+      
+  ],
+    "output": [
+      {
+        "key": "message",
+        "id": "1"
+      }
+    ],
+    "steps": [
+      {
+        "type": "extension",
+        "id": "@Felix/guetricksbackend",
+        "path": "@Felix/guetricksbackend/helloWorld.js",
+        "input": [],
+        "output": [
+          {
+            "key": "message",
+            "id": "1"
+          }
+        ]
+      },
+      {
+        "type": "extension",
+        "id": "@Felix/guetricksbackend",
+        "path": "@Felix/guetricksbackend/putNameIntoMessage.js",
+        "input": [
+          {
+            "key": "name",
+            "id": "10",
+            "optional": true
+          },
+          {
+            "key": "message",
+            "id": "1"
+          }
+        ],
+        "output": [
+          {
+            "key": "message",
+            "id": "1"
+          }
+        ]
+      }
+    ]
+  }
+}
